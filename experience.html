@@ -64,42 +64,6 @@
           { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
-      Reveal.customEvents['slide1'] = [
-        function() {
-          $('#slide1-1').fadeOut();
-        },
-        function() {
-          $('#slide1-2').fadeIn();
-        },
-        function() {
-          $('#slide1-2').fadeOut({
-            complete: function() {
-              $('#slide1-1').fadeIn();
-            },
-          });
-        },
-        function() {
-          $('#slide1-3').fadeIn();
-        },
-        function() {
-          $('#slide1-3').fadeOut({
-            complete: function() {
-              $('#slide1-4').fadeTo(400, 1);
-            },
-          });
-        },
-        function() {
-          $('#slide1-1').slideUp({
-            complete: function() {
-              $('#slide1-0').slideUp({
-                complete: function() {
-                  $('#slide1-5').slideDown();
-                },
-              });
-            },
-          });
-        },
-      ];
     </script>
   </body>
 </html>
